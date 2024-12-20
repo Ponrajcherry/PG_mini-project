@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--========== FAVICON ===========-->
+    <link rel="icon" href="../../assets/svg/logo.svg" type="image/svg+xml" />
+
+    <!--========== GOOGLE FONTS ===========-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet"
+    />
+
+    <!--========== BOXICONS ===========-->
+    <link
+        href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+        rel="stylesheet"
+    />
+
+    <!--========== CSS ===========-->
+    <link rel="preload" href="{{ url_for('static', filename='css/style.min.css') }}" as="style" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.min.css') }}" />
+</head>
+<body>
+    <!--========== HEADER ===========-->
+    <header class="header" id="header">
+        <nav class="nav container">
+            <div class="nav_box">
+                <a href="/" class="nav_logo">Booking Page</a>
+            </div>
+            <div class="nav_btns">
+                <i class="bx bx-moon change-theme" id="theme-button"></i>
+                <div class="nav_toggle" id="nav-toggle">
+                    <i class="bx bx-menu"></i>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <!--========== MAIN ===========-->
+    <main class="main container">
+        <section class="buy_data">
+            <h1 class="buy_title">
+                <span class="buy_title-secondary">Book Your Slot</span>
+            </h1>
+        </section>
+        
+        <div class="buy">
+            <!-- Package Selection Form -->
+            <form id="packageForm" class="buy_dice" method="POST" action="/select_package">
+                <div class="buy_product">
+                    <h2>Package</h2>
+                    <input type="radio" name="tipo" value="playstation" id="playstation" required />
+                    <label for="playstation">Select The Packages</label>
+
+                    <div class="buy_content" id="orcamento-bikcraft">
+                        <input type="radio" name="produt" value="basic" id="ps4" required />
+                        <label for="ps4">Basic Package <span>₹ 10,000</span></label>
+
+                        <input type="radio" name="produt" value="premium" id="ps5" />
+                        <label for="ps5">Premium Package <span>₹ 15,000</span></label>
+
+                        <input type="radio" name="produt" value="ultra premium" id="squid" />
+                        <label for="squid">Ultra Premium Package <span>₹ 20,000</span></label>
+                    </div>
+                </div>
+                <button type="submit" class="button_form" id="submitButtons">Select Package</button>
+            </form>
+        
+            
+            
+            <!-- Buy Form -->
+            <section class="buy_form">
+                <p>Details</p>
+                <form class="form" action="/book" method="POST">
+                    <div class="form_name">
+                        <div class="buy_form-names">
+                            <div class="form_name-2">
+                                <label for="name">First Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required />
+                            </div>
+
+                            <div class="form_last-name">
+                                <label for="last_name">Last Name</label>
+                                <input type="text" id="last_name" name="last_name" placeholder="Your Name" required />
+                            </div>
+                        </div>
+
+                        <div class="form_cpf">
+                            <label for="cpf">Mobile Number</label>
+                            <input type="text" id="cpf" name="cpf" placeholder="+91" required />
+                        </div>
+
+                        <div class="form_email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+                        </div>
+
+                        <div class="delivery_container">
+                            <div class="form_cep">
+                                <label for="cep">Event Date</label>
+                                <input type="date" id="cep" name="cep" required />
+                            </div>
+
+                            <div class="form_number">
+                                <label for="number">Time</label>
+                                <input type="time" id="number" name="number" required />
+                            </div>
+                        </div>
+
+                        <div class="delivery_container">
+                            <div class="form_place">
+                                <label for="place">Event Name</label>
+                                <input type="text" id="place" name="place" required />
+                            </div>
+
+                            <div class="form_neighborhood">
+                                <label for="neighborhood">Address</label>
+                                <input type="text" id="neighborhood" name="neighborhood" required />
+                            </div>
+                        </div>
+
+                        <div class="delivery_container">
+                            <div class="form_city">
+                                <label for="city">City</label>
+                                <input type="text" id="city" name="city" required />
+                            </div>
+                        </div>
+
+                        <button class="button_form" type="submit">Buy Now</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </main>
+
+    <!--========== SCROLL UP ===========-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="bx bx-up-arrow-alt scrollup_icon"></i>
+    </a>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

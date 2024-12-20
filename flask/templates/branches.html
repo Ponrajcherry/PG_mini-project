@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Square Shutters Studio</title>
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles1.css') }}">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body id="top">
+
+ *header*
+
+  <header class="header" id="header">
+    <nav class="nav container">
+        <a href="/" class="nav__logo">
+            <i class="ri-leaf-line nav__logo-icon"></i> SS STUDIO
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+              <li class="nav__item">
+                  <a href="/" class="nav__link">Home</a>
+              </li>
+              <li class="nav__item">
+                  <a href="branches" class="nav__link active-link">Branches</a>
+              </li>
+              <li class="nav__item">
+                  <a href="packages" class="nav__link">Packages</a>
+              </li>
+              <li class="nav__item">
+                <a href="gallery" class="nav__link">Gallery</a>
+            </li>
+              <li class="nav__item">
+                  <a href="buy" class="nav__link">Booking</a>
+              </li>
+              <li class="nav__item">
+                <a href="contact" class="nav__link">Contact</a>
+            <li class="nav__item">
+            </li>
+               
+          </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <div class="nav__btns">
+            <!-- Theme change button -->
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+            <div class="nav__toggle" id="nav-toggle">
+                <i class="ri-menu-line"></i>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+
+      <!-- 
+        - #HERO
+      -->
+
+      <section class="hero" id="home">
+        <div class="container">
+
+          <h2 class="h1 hero-title">A PICTURE STORY</h2>
+
+          <p class="hero-text">
+            Make Your Marriage OR Any Other Events Memorable By Booking Us
+          </p>
+
+          <div class="btn-group">
+            <button class="btn btn-primary">Learn more</button>
+
+            <a href="buy" class="btn btn-secondary">Book Now</a>
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+      <!-- 
+        - #POPULAR
+      -->
+
+      <section class="popular" id="destination">
+        <div class="container">
+
+          <p class="section-subtitle">Our Studio</p>
+
+          <h2 class="h2 section-title">Branches</h2>
+
+          <p class="section-text">
+          Our Branches Located In 3 Main Cities Of TamilNadu
+          </p>
+
+          <ul class="popular-list">
+
+            <li>
+              <div class="popular-card">
+          
+                <figure class="card-img">
+                  <img src="{{ url_for('static', filename='images/Coimbatore_junction.jpg') }}" alt="Coimbatore" loading="lazy">
+                </figure>
+          
+                <div class="card-content">
+          
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+          
+                  <p class="card-subtitle">
+                    <a href="#">Coimbatore</a>
+                  </p>
+          
+                  <h3 class="h3 card-title">
+                    <a href="#">Main Branch</a>
+                  </h3>
+          
+                  <p class="card-text">
+                    Anna Nagar Opposite Of CMS School, Coimbatore.
+                  </p>
+          
+                </div>
+          
+              </div>
+            </li>
+          
+            <li>
+              <div class="popular-card">
+          
+                <figure class="card-img">
+                  <img src="{{ url_for('static', filename='images/DSCN6870-01-e1542606021660-1.jpeg') }}" alt="Udumalpet" loading="lazy">
+                </figure>
+          
+                <div class="card-content">
+          
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+          
+                  <p class="card-subtitle">
+                    <a href="#">Udumalpet</a>
+                  </p>
+          
+                  <h3 class="h3 card-title">
+                    <a href="#">2ND Branch</a>
+                  </h3>
+          
+                  <p class="card-text">
+                    5/18d Kannamanikanoor, Udumalpet.
+                  </p>
+          
+                </div>
+          
+              </div>
+            </li>
+          
+            <li>
+              <div class="popular-card">
+          
+                <figure class="card-img">
+                  <img src="{{ url_for('static', filename='images/pollachi.jpg') }}" alt="Pollachi" loading="lazy">
+                </figure>
+          
+                <div class="card-content">
+          
+                  <div class="card-rating">
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                    <ion-icon name="star"></ion-icon>
+                  </div>
+          
+                  <p class="card-subtitle">
+                    <a href="#">Pollachi</a>
+                  </p>
+          
+                  <h3 class="h3 card-title">
+                    <a href="#">3RD Branch</a>
+                  </h3>
+          
+                  <p class="card-text">
+                    Old Pollachi Busstand, Pollachi.
+                  </p>
+          
+                </div>
+          
+              </div>
+            </li>
+          
+          </ul>
+          
+          <button class="btn btn-primary">More Branches Coming</button>
+          
+          </div>
+          </section>
+
+  <!-- 
+    - #FOOTER
+  -->
+
+  <footer class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+
+        <div class="footer-brand">
+
+          <a href="#" class="logo">
+            <img src="./assets/images/logos.png" alt="Tourly logo">
+          </a>
+
+          <p class="footer-text">
+            Make Your Marriage OR Any Other Events Memorable By Booking Square Shutter Studio. 
+          </p>
+
+        </div>
+
+        <div class="footer-contact">
+
+          <h4 class="contact-title">Contact Us</h4>
+
+          <p class="contact-text">
+            Feel free to contact and reach us !!
+          </p>
+
+          <ul>
+
+            <li class="contact-item">
+              <ion-icon name="call-outline"></ion-icon>
+
+              <a href="tel:+918489236983" class="contact-link">+91 8489236983</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="mail-outline"></ion-icon>
+
+              <a href="mailto:ssstudioudt@gmail.com" class="contact-link">ssstudioudt@gmail.com</a>
+            </li>
+
+            <li class="contact-item">
+              <ion-icon name="location-outline"></ion-icon>
+
+              <address>5/18d Kannamanikanoor,Udumalpet.</address>
+            </li>
+
+          </ul>
+
+        </div>
+
+        <div class="footer-form">
+
+          <p class="form-text">
+            Subscribe our newsletter for more offers & discounts. !!
+          </p>
+
+          <form action="" class="form-wrapper">
+            <input type="email" name="email" class="input-field" placeholder="Enter Your Email" required>
+
+            <button type="submit" class="btn btn-secondary">Subscribe</button>
+          </form>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+
+        <p class="copyright">
+          &copy; 2022 <a href="">Square Shuttle Studio</a>. All rights reserved
+        </p>
+
+        <ul class="footer-bottom-list">
+
+          <li>
+            <a href="#" class="footer-bottom-link">Privacy Policy</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">Term & Condition</a>
+          </li>
+
+          <li>
+            <a href="#" class="footer-bottom-link">FAQ</a>
+          </li>
+
+        </ul>
+
+      </div>
+    </div>
+
+  </footer>
+
+
+
+
+
+  <!-- 
+    - #GO TO TOP
+  -->
+
+  <a href="#top" class="go-top" data-go-top>
+    <ion-icon name="chevron-up-outline"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  <script src="{{ url_for('static', filename='js/main1.js') }}"></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
